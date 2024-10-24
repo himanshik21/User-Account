@@ -7,6 +7,7 @@ const Login = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
+  // Handle the login button functionality
   const handleLogin = (e) => {
     e.preventDefault();
     const userData = JSON.parse(localStorage.getItem(email));
@@ -29,6 +30,7 @@ const Login = () => {
             <input
               type="email"
               className="form-control"
+              placeholder="Enter your email address"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
@@ -39,6 +41,7 @@ const Login = () => {
             <input
               type="password"
               className="form-control"
+              placeholder="Enter your password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required

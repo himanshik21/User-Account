@@ -9,15 +9,17 @@ const Register = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
+  // handle the register button functionality
   const handleRegister = (e) => {
     e.preventDefault();
     if(password.length !== 8){
       setError("Password must be atleast of 8 characters.");
       return;
     }
+    // check if user with same email id exists or not
     const existingUser = localStorage.getItem(email);
     if (existingUser) {
-      alert("This email is already registered.Please try to login or use another email.");
+      alert("This email is already registered. Please try to login or use another email.");
       return;
     }
     const newUser = { fullName, country, email, password };
@@ -36,6 +38,7 @@ const Register = () => {
             <input
               type="text"
               className="form-control"
+              placeholder="Enter your full name"
               value={fullName}
               onChange={(e) => setFullName(e.target.value)}
               required
@@ -46,6 +49,7 @@ const Register = () => {
             <input
               type="text"
               className="form-control"
+              placeholder="Enter your country"
               value={country}
               onChange={(e) => setCountry(e.target.value)}
               required
@@ -56,6 +60,7 @@ const Register = () => {
             <input
               type="email"
               className="form-control"
+              placeholder="Enter your email address"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
@@ -66,6 +71,7 @@ const Register = () => {
             <input
               type="password"
               className="form-control"
+              placeholder="Enter your password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required

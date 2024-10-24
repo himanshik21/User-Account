@@ -15,6 +15,7 @@ const UserProfile = () => {
     }
   }, [navigate]);
 
+  // handle the logout button functionality
   const handleLogout = () => {
     localStorage.removeItem("loggedInUser");
     navigate("/");

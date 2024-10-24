@@ -21,16 +21,14 @@ const EditProfile = () => {
     }
   }, [navigate]);
 
+  // handle the update user functionality
   const handleUpdate = (e) => {
     e.preventDefault();
-
     const userData = JSON.parse(localStorage.getItem(email));
-
     if (newPassword && currentPassword !== userData.password) {
       setError("Current password is incorrect.");
       return;
     }
-
     const updatedUser = {
       fullName: editFullName ? editFullName : userData.fullName,
       email,
@@ -79,6 +77,7 @@ const EditProfile = () => {
             <input
               type="password"
               className="form-control"
+              placeholder="Enter your last password"
               value={currentPassword}
               onChange={(e) => setCurrentPassword(e.target.value)}
             />
@@ -89,6 +88,7 @@ const EditProfile = () => {
             <input
               type="password"
               className="form-control"
+              placeholder="Enter your new password"
               value={newPassword}
               onChange={(e) => setNewPassword(e.target.value)}
             />
