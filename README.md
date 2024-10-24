@@ -29,4 +29,48 @@ Before you begin, ensure you have the following installed:
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
+   git clone https://github.com/himanshik21/User-Account
+
+2. Navigate to the project directory:
+
+   ```bash
+    cd User-Account
+
+3. **Install dependencies:
+   ```bash
+   npm install
+
+4. **Running the Application
+   ```bash
+   npm run dev
+
+
+### How to Use
+
+1). Registration:
+
+   -Navigate to the registration page.
+   
+   -Fill in your full name, email, password, and country.
+   
+   -Submit the form to create a new account.
+
+2). Login:
+
+   -Enter your registered email and password on the login page.
+   
+   -Click the 'Login' button to access your account.
+   
+   -View & Edit Profile:
+
+Upon successful login, you’ll be redirected to your profile page.
+You can view your details and edit them if necessary.
+Click 'Logout' to log out of your account.
+
+### Error Handling
+1.User input validation for registration and login.
+
+2.Proper messages for invalid email or password during login.
+
+3.Alerts for actions like successful registration and logout.
+
