@@ -61,11 +61,13 @@ Before you begin, ensure you have the following installed:
    
    -Click the 'Login' button to access your account.
    
-   -View & Edit Profile:
+3).View & Edit Profile:
 
-Upon successful login, you’ll be redirected to your profile page.
-You can view your details and edit them if necessary.
-Click 'Logout' to log out of your account.
+  -Upon successful login, you’ll be redirected to your profile page.
+  
+  -You can view your details and edit them if necessary.
+  
+  -Click 'Logout' to log out of your account.
 
 ### Error Handling
 1.User input validation for registration and login.
