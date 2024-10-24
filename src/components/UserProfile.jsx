@@ -6,7 +6,7 @@ const UserProfile = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const email = localStorage.getItem("loggedInUser");
+    const email = localStorage.getItem("loggedUser");
     if (email) {
       const userData = JSON.parse(localStorage.getItem(email));
       setUser(userData);
@@ -17,7 +17,7 @@ const UserProfile = () => {
 
   // handle the logout button functionality
   const handleLogout = () => {
-    localStorage.removeItem("loggedInUser");
+    localStorage.removeItem("loggedUser");
     navigate("/");
   };
 

@@ -14,9 +14,12 @@ const Login = () => {
 
     if (userData && userData.password === password) {
       localStorage.setItem("loggedUser", email);
+      console.log("loggin");
       navigate("/profile");
+      console.log("run");
     } else {
       setError("Incorrect Email or Password");
+      alert("Invalid user credentials. Please Register first!");
     }
   };
 

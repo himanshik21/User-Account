@@ -16,6 +16,7 @@ const EditProfile = () => {
       const userData = JSON.parse(localStorage.getItem(email));
       setEditFullName(userData.fullName);
       setEmail(userData.email);
+      setEditCountry(userData.country)
     } else {
       navigate("/");
     }
